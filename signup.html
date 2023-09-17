@@ -1,0 +1,179 @@
+﻿<html>
+<head>
+<title>Job Portal - Sign Up</title>
+<style>
+  body {
+    background-color: #b4e2f2;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  header {
+    background-color: orange;
+    color: black;
+    text-align: center;
+    padding: 10px;
+  }
+  header h1 {
+      margin: 0;
+    }
+    header ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    header li {
+      float: left;
+    }
+
+    header li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    header li a:hover {
+      background-color: #111;
+    }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  .form-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  .form-container h3 {
+    margin-bottom: 10px;
+  }
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-container input[type="text"],
+  .form-container input[type="password"],
+  .form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+  .form-container input[type="submit"] {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .form-container input[type="submit"]:hover {
+    background-color: #ff6600;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Rwanda JobConnect - Sign Up</h1>
+<div>
+<br/>
+</div>
+<ul>
+     <li> <a class="active" href="home.html">HOME</a> </li>
+     <li> <a href="news.html">NEWS</a> </li>
+     <li> <a href="best.html">APPLY</a> </li>
+     <li> <a href="signup.html">SIGN UP</a> </li>
+     <li> <a href="about.html">ABOUT US</a> </li>
+</ul>
+</header>
+<script>
+function toggleFields(userType) {
+  const nameLabel = document.querySelector('label[for="name"]');
+  const emailLabel = document.querySelector('label[for="email"]');
+  
+  if (userType === "employee") {
+    nameLabel.textContent = "Name:";
+    emailLabel.textContent = "Email:";
+  } else if (userType === "employer") {
+    nameLabel.textContent = "Company Name:"; // Change label text
+    emailLabel.textContent = "Email:"; // Keep the same label for both user types
+  }
+}
+</script>
+
+<div class="container">
+  <div class="form-container">
+    <h3>Create an Account</h3>
+    
+    <label for="userType">Sign up as:</label>
+    <select id="userType" name="userType" required onchange="toggleFields(this.value)">
+      <option value="" selected disabled>Select user type</option>
+      <option value="employee">Employee</option>
+      <option value="employer">Employer</option>
+    </select>
+    
+    <form action="signup.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email" required>
+      
+    <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required placeholder="Enter your password">
+      
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirm Password" name="confirmPassword" required placeholder="Confirm your password">
+      
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="" selected disabled>Select your country</option>
+        <option value="rwanda">Rwanda</option>
+        <option value="kenya">Kenya</option>
+        <option value="tanzania">Tanzania</option>
+        <option value="uganda">Uganda</option>
+        <option value="burundi">Burundi</option>
+        <option value="ethiopia">Ethiopia</option>
+        <option value="ghana">Ghana</option>
+        <option value="nigeria">Nigeria</option>
+        <option value="southafrica">South Africa</option>
+      </select>
+      
+      <label for="telephone">Telephone Number:</label>
+      <div>
+        <select id="countryCode" name="countryCode" required>
+          <option value="" selected disabled>Select country code</option>
+          <option value="+250">Rwanda (+250)</option>
+          <option value="+254">Kenya (+254)</option>
+          <option value="+255">Tanzania (+255)</option>
+          <option value="+256">Uganda (+256)</option>
+          <option value="+257">Burundi (+257)</option>
+          <option value="+251">Ethiopia (+251)</option>
+          <option value="+233">Ghana (+233)</option>
+          <option value="+234">Nigeria (+234)</option>
+          <option value="+27">South Africa (+27)</option>
+        </select>
+        <input type="text" id="telephone" name="telephone" placeholder="Enter your telphone number" required>
+      </div>
+      
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+</div>
+</body>
+</html>
+

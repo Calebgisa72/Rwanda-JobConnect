@@ -1,0 +1,194 @@
+<html>
+<head>
+<title> JobConnect Employer dashbord </title>
+<style>
+body{
+    background-color:aquamarine;
+}
+header{
+    background-color: orange;
+    color: black;
+    text-align: center;
+    padding: 10px;
+  }
+  #profile-menu{
+    float: right;
+  }
+.search-form {
+  font-family: times new roman;
+  font-size: 19px;
+  align: right;
+}
+ul {
+list-style-type: none;
+margin: 0; padding: 0;
+overflow: hidden; 
+background-color:#333;
+}
+li {
+float: left;
+}
+li a{
+display: block;
+color: white; 
+text-align: center; 
+padding: 14px 16px; 
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #341f91;
+}
+.profile-picture{
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+  background-color: #ccc;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+.profile-picture img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.container {
+  background-color: rgb(147, 204, 235);
+    max-width: 1200px;
+    height: 500%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18;
+    margin: auto;
+    padding: 20px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+.form-container input[type="text"],
+  .form-container input[type="password"],
+  .form-container textarea,
+  .form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+
+</style>
+
+
+<head>
+    <body>
+        <header>
+          <h1 style align="left" id="logo">Rwanda Job<span>Connect Employer Dashbord</span></h1>
+    <div align="center">
+<h3>
+<ul>
+     <li> <a class="active" href="loginA.html">HOME</a> </li>
+     <li> <a href="report.html">REPORT</a> </li>
+     <li> <a href="job.html">JOB POST</a> </li>
+     <li> <a href="news.html">NEWS</a> </li>
+     <li> <a href="message.html">MASSAGES</a> </li>
+     <li> <a href="home.html">LOG OUT</a> </li>
+     <li id="profile-menu">
+     <a href="profile.html"><div class="profile-picture">
+      <img src="c.jpeg" alt="Profile Picture">
+      </div>
+    </a>
+     </li>
+     
+</ul>
+    </div>
+</h3>
+ </header>
+<div class="container">
+  <div id="jobListingsContainer">
+    <script>
+        const jobList = JSON.parse(localStorage.getItem('jobList')) || [];
+      
+
+
+jobList.forEach(job => {
+const jobListing = document.createElement('div');
+jobListing.classList.add('job-post');
+
+  const jobTitle = document.createElement('h3');
+jobTitle.textContent = job.position;
+jobListing.appendChild(jobTitle);
+
+const companyInfo = document.createElement('p');
+companyInfo.textContent = 'Company: ' + job.company;
+jobListing.appendChild(companyInfo);
+
+const jobDesc = document.createElement('p');
+jobDesc.textContent = 'Description: ' + job.description;
+jobListing.appendChild(jobDesc);
+
+const eduLevel = document.createElement('p');
+eduLevel.textContent = 'Education ' + job.education;
+jobListing.appendChild(eduLevel);
+
+const salary = document.createElement('p');
+salary.textContent = 'Salary Range ' + job.salary;
+jobListing.appendChild(salary);
+const editButton =document.createElement('button');
+  editButton.classList.add('button');
+  editButton.textContent = 'Edit';
+  editButton.addEventListener('click', ()=> editJob(index));
+  jobListing.appendChild(editButton);
+
+  const deleteButton =document.createElement('button');
+  deleteButton.classList.add('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.addEventListener('click', ()=> deleteJob(index));
+  jobListing.appendChild(deleteButton);
+
+const jobListingsContainer = document.getElementById('jobListingsContainer');
+jobListingsContainer.appendChild(jobListing);
+});
+    </script>
+    </div>
+<div>
+  <h2>Freelance Work</h2>
+<div class="freelance-listings">
+  <div class="freelance-post">
+    <h3>Translation Work</h3>
+    <p>Description: Translate a video from English to Kinyarwanda.</p>
+    <p>Salary Range: 50,000 - 80,000 RWFR</p>
+    <p>Duration: 1-2 weeks</p>
+  </div>
+  <div class="freelance-pos">
+    <h3>Programming Work</h3>
+    <p>Description: Develop a website using HTML, CSS, and JavaScript.</p>
+    <p>Salary Range: 70,000 - 120,000 RWFR</p>
+    <p>Duration: 2-3 weeks</p>
+</div>
+</body>
+    </body>
+</head>
+</html>

@@ -1,0 +1,199 @@
+﻿<html>
+<head>
+  <title>Job portal.com - About Us</title>
+  <style>
+  
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #b4e2f2;
+color: #333;
+    }
+
+  header {
+      background-color: orange;
+      color: black;
+      text-align: center;
+      padding: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    header li {
+      float: left;
+    }
+
+    header li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    header li a:hover {
+      background-color: #111;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .about-section {
+      background-color: #b3e2e2;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section h2 {
+      color: #ff9800;
+    }
+
+    .about-section p {
+      color: black;
+font-size: 20;
+font-family: "times new roman",times,seif;
+    }
+
+    .mission-vision-section {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .mission-vision-section h3 {
+      color: #ff9800;
+    }
+
+    .mission-vision-section p {
+       color: black;
+font-size: 20;
+font-family: "times new roman",times,seif;
+    }
+
+    footer {
+      background-color: #b71c1c;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .faq-section {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .faq-question {
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      display: none;
+    }
+  </style>
+  <script>
+    function toggleAnswer(index) {
+      const answer = document.getElementById(`answer-${index}`);
+      if (answer.style.display === "none") {
+        answer.style.display = "block";
+      } else {
+        answer.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Rwanda Job<span>Connect</span></h1>
+<div>
+<br/>
+</div>
+    <ul>
+      <li><a class="active" href="home.html">HOME</a></li>
+      <li><a href="news.html">NEWS</a></li>
+      <li><a href="best.html">APPLY</a></li>
+      <li><a href="signup.html">SIGN UP</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+    </ul>
+  </header>
+
+  <div class="container">
+    <div class="about-section">
+      <h2>About Us</h2>
+      <p>
+        Rwanda JobConnect is a leading job portal dedicated to fostering career growth and contributing to Rwanda's economic development. Our platform connects job seekers with a wide range of job opportunities within Rwanda, making job search and hiring processes more efficient for individuals and businesses.
+      </p>
+      <p>
+        As a homegrown initiative, Rwanda JobConnect aims to empower the local workforce, promote inclusive hiring practices, and support the growth of businesses across Rwanda and the African continent. Our mission is to play a pivotal role in reducing unemployment rates and creating a skilled and diverse talent pool that drives sustainable economic growth.
+      </p>
+      <p>
+        At Rwanda JobConnect, we believe in the potential of every individual and the power of meaningful work. We are committed to providing job seekers with resources and tools to enhance their employability, while also assisting employers in finding the best-fit candidates who contribute to their organizations' success.
+      </p>
+    </div>
+
+    <div class="mission-vision-section">
+      <h3>Mission</h3>
+      <p>
+        Our mission is to empower the Rwandan community and individuals across Africa by providing easy access to job opportunities within Rwanda. We are committed to facilitating employers in finding the perfect fit for their workforce needs.
+      </p>
+
+      <h3>Vision</h3>
+      <p>
+        Our vision is to create a leading job portal web platform that bridges the gap between job seekers and employers, thereby reducing unemployment rates in Rwanda and contributing to the growth and development of Rwandan businesses. We aspire to be the go-to platform for both job seekers and employers, fostering a thriving job market in Rwanda and beyond.
+      </p>
+    </div>
+
+    <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-question" onclick="toggleAnswer(1)">
+        <h3>1. What is a job portal website?</h3>
+      </div>
+      <div class="faq-answer" id="answer-1">
+        <p>
+          A job portal website is an online platform that connects job seekers with employers or job opportunities. It serves as an intermediary, making it easier for job seekers to find suitable jobs and employers to find qualified candidates.
+        </p>
+      </div>
+
+      <div class="faq-question" onclick="toggleAnswer(2)">
+        <h3>2. How does Rwanda JobConnect help job seekers from Africa?</h3>
+      </div>
+      <div class="faq-answer" id="answer-2">
+        <p>
+          Rwanda JobConnect is dedicated to connecting job seekers from Africa with job opportunities in Rwanda. It provides a centralized platform where job seekers can explore various openings in Rwanda, making the job search process more accessible and efficient.
+        </p>
+      </div>
+
+      <div class="faq-question" onclick="toggleAnswer(3)">
+        <h3>3. What are the benefits of using Rwanda JobConnect for employers?</h3>
+      </div>
+      <div class="faq-answer" id="answer-3">
+        <p>
+          Rwanda JobConnect offers several benefits for employers in Rwanda. It enables them to access a diverse talent pool from Africa, making it easier to find candidates with the required skills and expertise. By using the platform, employers can streamline their hiring process and discover the best-fit candidates for their organizations.
+        </p>
+  </div>
+
+  <footer>
+    <p>Contact us:</p>
+    <p>Telephone number: +250780288454</p>
+    <p>WhatsApp number: +250780288454</p>
+    <p>Email: gisacaleb72@gmail.com</p>
+  </footer>
+</body>
+</html>
+

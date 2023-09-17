@@ -1,0 +1,231 @@
+<html>
+<head>
+  <style>
+   body {
+    background-color: #b4e2f2;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  header {
+    background-color: orange;
+    color: black;
+    text-align: center;
+    padding: 10px;
+  }
+header h1 {
+      margin: 0;
+    }
+ul {
+list-style-type: none;
+margin: 0; padding: 0;
+overflow: hidden; 
+background-color:#333;
+}
+li {
+float: left;
+}
+li a{
+display: block;
+color: white; 
+text-align: center; 
+padding: 14px 16px; 
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+#profile-menu{
+    float: right;
+  }
+#jobListingsContainer{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.profile-picture{
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+  background-color: #ccc;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.profile-picture img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+  /* Job Listings */
+  .job-listings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .job-posts {
+    width: calc(50% - 20px);
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  .job-post h3 {
+    margin: 0;
+  }
+
+  .apply-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  /* Freelance Work */
+  .freelance-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .freelance-post {
+    width: calc(50% - 20px);
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  .freelance-post h3 {
+    margin: 0;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style align="left" id="logo">Rwanda Job<span>Connect Employee Dashbord</span></h1>
+<div align="center">
+<h3>
+<ul>
+     <li> <a class="active" href="loginB.html">HOME</a> </li>
+     <li> <a href="news.html">NEWS</a> </li>
+     <li> <a href="cv.html">RESUME</a> </li>
+     <li> <a href="about.html">ABOUT US</a> </li>
+     <li> <a href="message.html">NOTIFICATION</a> </li>
+     <li> <a href="home.html">LOG OUT</a> </li>
+     <li id="profile-menu">
+     <a href="profile.html"><div class="profile-picture">
+      <img src="c.jpeg" alt="Profile Picture">
+      </div>
+    </a>
+     </li>
+</ul>
+</div>
+</h3>
+</header>
+<h2>Job Listings</h2>
+<div class="job-listings">
+  <div class="job-posts">
+  <h3>Promotion Manager</h3>
+  <p style= "font-family:times new roman; font-size:23px">Rwanda Development Board(RDB)</p>
+  <p style= "font-family:times new roman; font-size:19px">Position: Investment promotion specialist</p>
+  <p style= "font-family:times new roman; font-size:19px">Description: An Investment Promotion Specialist is responsible for attracting domestic and foreign investments to a region, city, or country. They develop strategies and campaigns to showcase the benefits of investing in a particular location, working closely with government agencies, business associations, and potential investors. Their role involves conducting market research, creating promotional materials, organizing events, and providing information to potential investors to facilitate informed decision-making.</p>
+  <p><u>Education: Bachelor's Degree</u></p>
+  <p>Salary Range: 350,000 - 500,000 RWF</p>
+  <a href="apply.html" class="apply-button">Apply</a>
+</div>
+<!-- Repeat the above structure for other job posts -->
+<div class="job-posts">
+  <h3>Support Group</h3>
+  <p style= "font-family:times new roman; font-size:23px">Company: MTN Rwanda</p>
+  <p style= "font-family:times new roman; font-size:19px">Position: Customer Service Representative</p>
+  <p style= "font-family:times new roman; font-size:19px">Description: A Customer Service Representative serves as the primary point of contact between a company and its customers. They handle inquiries, complaints, and requests, aiming to provide timely and accurate assistance. Their responsibilities include addressing customer concerns, providing product or service information, processing orders or returns, and ensuring a positive customer experience. Effective communication, problem-solving, and empathy are key skills for this role.</p>
+  <p><u>Education: Bachelor's Degree</u></p>
+  <p>Salary Range: 150,000 - 200,000 RWF</p>
+  <a href="apply.html" class="apply-button">Apply</a>
+</div>
+<div class="job-posts">
+  <h3>System Administrator</h3>
+  <p style= "font-family:times new roman; font-size:23px">Company: Bank of Kigali</p>
+  <p style= "font-family:times new roman; font-size:19px">Position: IT System Administrator</p>
+  <p style= "font-family:times new roman; font-size:19px">Description: An IT System Administrator is responsible for managing an organization's information technology infrastructure. They oversee the installation, maintenance, and configuration of hardware, software, servers, and networks. This role involves monitoring system performance, troubleshooting technical issues, implementing security measures, and ensuring data backup and recovery processes are in place. IT system administrators play a crucial role in maintaining the reliability and security of an organization's IT systems..</p>
+  <p><u>Education: Master's Degree</u></p>
+  <p>Salary Range: 500,000 - 600,000 RWF</p>
+  <a href="apply.html" class="apply-button">Apply</a>
+</div>
+<div class="job-posts">
+  <h3>Manager</h3>
+  <p style= "font-family:times new roman; font-size:23px">Company: Bralirwa</p>
+  <p style= "font-family:times new roman; font-size:19px">Position: Marketing Manager</p>
+  <p style= "font-family:times new roman; font-size:19px">Description: A Marketing Manager leads the marketing efforts of a company or product. They develop and execute marketing strategies to promote products or services, increase brand awareness, and drive customer engagement. Responsibilities include market research, planning and implementing advertising campaigns, managing a team, analyzing marketing data, and collaborating with other departments to align marketing activities with overall business goals. A marketing manager plays a pivotal role in shaping a company's image and driving its growth.</p>
+  <p><u>Education: Master's Degree</u></p>
+  <p>Salary Range: 300,000 - 400,000 RWF</p>
+  <a href="apply.html" class="apply-button">Apply</a>
+</div>
+</div>
+</div>
+  
+    <div id="jobListingsContainer">
+      <script>
+          const jobList = JSON.parse(localStorage.getItem('jobList')) || [];
+        
+  
+  
+  jobList.forEach(job => {
+  const jobListing = document.createElement('div');
+  jobListing.classList.add('job-post');
+  
+    const jobTitle = document.createElement('h3');
+  jobTitle.textContent = job.position;
+  jobListing.appendChild(jobTitle);
+  
+  const companyInfo = document.createElement('p');
+  companyInfo.textContent = 'Company: ' + job.company;
+  jobListing.appendChild(companyInfo);
+  
+  const jobDesc = document.createElement('p');
+  jobDesc.textContent = 'Description: ' + job.description;
+  jobListing.appendChild(jobDesc);
+  
+  const eduLevel = document.createElement('p');
+  eduLevel.textContent = 'Education ' + job.education;
+  jobListing.appendChild(eduLevel);
+  
+  const salary = document.createElement('p');
+  salary.textContent = 'Salary Range ' + job.salary;
+  jobListing.appendChild(salary);
+  
+  const applyButton =document.createElement('a');
+  applyButton.href='apply.html';
+  applyButton.classList.add('apply-button');
+  applyButton.textContent = 'Apply';
+  jobListing.appendChild(applyButton);
+  
+  const jobListingsContainer = document.getElementById('jobListingsContainer');
+  jobListingsContainer.appendChild(jobListing);
+  });
+      </script>
+      </div>
+  <div>
+    <h2>Freelance Work</h2>
+  <div class="freelance-listings">
+    <div class="freelance-post">
+      <h3>Translation Work</h3>
+      <p>Description: Translate a video from English to Kinyarwanda.</p>
+      <p>Salary Range: 50,000 - 80,000 RWFR</p>
+      <p>Duration: 1-2 weeks</p>
+    </div>
+    <div class="freelance-pos">
+      <h3>Programming Work</h3>
+      <p>Description: Develop a website using HTML, CSS, and JavaScript.</p>
+      <p>Salary Range: 70,000 - 120,000 RWFR</p>
+      <p>Duration: 2-3 weeks</p>
+  </div>
+</body>
+</html>
+
